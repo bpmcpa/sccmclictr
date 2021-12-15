@@ -22,11 +22,11 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.5
     
     - name: Restore dependencies
-      run: nuget restore SCCMCliCtrWPF\SCCMCliCtrWPF.sln
+      run: nuget restore SCCMCliCtrWPF/SCCMCliCtrWPF.sln
     
     - name: Build
-      run: dotnet build SCCMCliCtrWPF\SCCMCliCtrWPF.sln --no-restore
+      run: dotnet build SCCMCliCtrWPF/SCCMCliCtrWPF.sln --no-restore
       
     - name: Test
-      run: dotnet test SCCMCliCtrWPF\SCCMCliCtrTests\SCCMCliCtrTests.csproj --no-build --verbosity normal
+      run: dotnet test SCCMCliCtrWPF/SCCMCliCtrTests/SCCMCliCtrTests.csproj --no-build --verbosity normal
 
